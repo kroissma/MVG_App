@@ -1,0 +1,21 @@
+.newsPublishDate {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.newsTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.newsText {
+    -fx-font-size: 12px;
+}
+
+.newsElementBackground:hover {
+    -fx-background-color: #3c3f41;
+}
+
+.newsElementBackground:hover .newsTitle, .newsElementBackground:hover .newsPublishDate, .newsElementBackground:hover .newsText {
+    -fx-text-fill: white;
+}

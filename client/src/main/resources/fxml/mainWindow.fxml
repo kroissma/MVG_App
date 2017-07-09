@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="768.0" prefWidth="1024.0"
+    stylesheets="@/css/main.css"
+    xmlns="http://javafx.com/javafx/8"
+    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.MainController"
+    fx:id="vBoxMain">
+    <children>
+        <ProgressBar style="-fx-border-insets: 0; -fx-border-radius: 0; -fx-border-style: none;"
+            maxWidth="1.7976931348623157E308" progress="0.4"
+            fx:id="pbLoadingProgress"/>
+        <MenuBar fx:id="mbMain">
+            <menus>
+                <Menu mnemonicParsing="false" text="%menu.application" fx:id="muApplication">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#logout"
+                            visible="false" fx:id="miLogout"/>
+                        <MenuItem mnemonicParsing="false" onAction="#exitApplication"
+                            fx:id="miExit"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" fx:id="muLanguage">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#germanMenuAction"
+                            fx:id="miGerman"/>
+                        <MenuItem mnemonicParsing="false" onAction="#englishMenuAction"
+                            fx:id="miEnglish"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" fx:id="muHelp">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#aboutApplication"
+                            fx:id="miAbout"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <StackPane VBox.vgrow="ALWAYS" fx:id="spMainContent">
+            <children>
+                <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                    side="LEFT" tabClosingPolicy="UNAVAILABLE" fx:id="tpContent">
+                </TabPane>
+            </children>
+        </StackPane>
+    </children>
+</VBox>

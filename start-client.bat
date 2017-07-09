@@ -1,0 +1,1 @@
+mvnw.cmd -pl=client -am spring-boot:run 

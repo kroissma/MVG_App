@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" onMouseClicked="#showNewsDetails" spacing="5.0"
+    styleClass="newsElementBackground" xmlns="http://javafx.com/javafx/8.0.112"
+    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.news.NewsElementController">
+    <stylesheets>
+        <URL value="@/css/newsElement.css"/>
+    </stylesheets>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <Label styleClass="newsPublishDate" text="&lt;DD.MM.YYYY | hh:mm&gt;" fx:id="lblDate"/>
+    <Label styleClass="newsTitle" text="&lt;NewsTitle&gt;" fx:id="lblTitle"/>
+    <Label styleClass="newsText" text="&lt;NewsText&gt;" wrapText="true" fx:id="lblText"/>
+</VBox>

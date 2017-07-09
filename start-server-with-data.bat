@@ -1,0 +1,1 @@
+mvnw.cmd -pl=server -am spring-boot:run -Drun.profiles=generateData
