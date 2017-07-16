@@ -5,23 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>at.ac.tuwien.inso.sepm.ticketline</groupId>
-        <artifactId>ticketline</artifactId>
-        <version>3.0.0-SNAPSHOT</version>
+        <groupId>at.mvgeboltskirchen.kroissma.mvgapp</groupId>
+        <artifactId>mvgapp</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ticketline-client</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <artifactId>mvgapp-client</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <!-- project settings -->
         <start-class>at.mvgeboltskirchen.kroissma.mvgapp.client.MvgAppClientApplication
         </start-class>
-        <preloader-class>at.ac.tuwien.inso.sepm.ticketline.client.app.preloader.AppPreloader
+        <preloader-class>at.mvgeboltskirchen.kroissma.mvgapp.client.app.preloader.AppPreloader
         </preloader-class>
         <!-- dependency -->
-        <ticketline-rest.version>3.0.0-SNAPSHOT</ticketline-rest.version>
+        <mvgapp-rest.version>1.0.0-SNAPSHOT</mvgapp-rest.version>
         <spring.version>4.3.7.RELEASE</spring.version>
         <httpclient.version>4.5.3</httpclient.version>
         <controlsfx.version>8.40.12</controlsfx.version>
@@ -38,9 +38,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>at.ac.tuwien.inso.sepm.ticketline</groupId>
-            <artifactId>ticketline-rest</artifactId>
-            <version>${ticketline-rest.version}</version>
+            <groupId>at.mvgeboltskirchen.kroissma.mvgapp</groupId>
+            <artifactId>mvgapp-rest</artifactId>
+            <version>${mvgapp-rest.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,5 +1,5 @@
 logging:
-  file: ./log/ticketline.client.log
+  file: ./log/mvgapp.client.log
   level.: WARN
 
 banner:
@@ -7,7 +7,7 @@ banner:
 
 spring:
   application:
-    name: Ticketline Client
+    name: MVG App Client
     version: @project.version@
   profiles:
     active: development
