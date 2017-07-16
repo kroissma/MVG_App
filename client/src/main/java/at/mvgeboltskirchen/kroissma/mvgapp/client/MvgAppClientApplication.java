@@ -18,7 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {"at.mvgeboltskirchen.kroissma.mvgapp.client",
     "at.mvgeboltskirchen.kroissma.springfx"})
-public class TicketlineClientApplication extends SpringFxApplication {
+public class MvgAppClientApplication extends SpringFxApplication {
 
     private Stage mainStage;
 
@@ -29,7 +29,7 @@ public class TicketlineClientApplication extends SpringFxApplication {
 
     public static void main(String[] args) {
         System.setProperty("java.awt.headless", "false");
-        LauncherImpl.launchApplication(TicketlineClientApplication.class, AppPreloader.class, args);
+        LauncherImpl.launchApplication(MvgAppClientApplication.class, AppPreloader.class, args);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class TicketlineClientApplication extends SpringFxApplication {
             javaFxConfigurationProperties.getInitialHeight()
         ));
         stage.getIcons().add(new Image(
-            TicketlineClientApplication.class.getResourceAsStream("/image/ticketlineIcon.png")));
+            MvgAppClientApplication.class.getResourceAsStream("/image/ticketlineIcon.png")));
         stage.centerOnScreen();
         stage.show();
         stage.setOnCloseRequest(event -> {

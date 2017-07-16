@@ -1,7 +1,7 @@
 package at.mvgeboltskirchen.kroissma.mvgapp.client.gui.user;
 
 
-import at.mvgeboltskirchen.kroissma.mvgapp.client.TicketlineClientApplication;
+import at.mvgeboltskirchen.kroissma.mvgapp.client.MvgAppClientApplication;
 import at.mvgeboltskirchen.kroissma.mvgapp.client.exception.DataAccessException;
 import at.mvgeboltskirchen.kroissma.mvgapp.client.gui.MainController;
 import at.mvgeboltskirchen.kroissma.mvgapp.client.gui.TabHeaderController;
@@ -43,7 +43,7 @@ import org.springframework.stereotype.Component;
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
-    private final TicketlineClientApplication mainApp;
+    private final MvgAppClientApplication mainApp;
     private final SpringFxmlLoader springFxmlLoader;
     private final MainController mainController;
     private final UserService userService;
@@ -82,7 +82,7 @@ public class UserController {
     private String username;
 
     public UserController(SpringFxmlLoader springFxmlLoader, MainController mainController,
-        TicketlineClientApplication mainApp, UserService userService) {
+        MvgAppClientApplication mainApp, UserService userService) {
         this.springFxmlLoader = springFxmlLoader;
         this.mainApp = mainApp;
         this.userService = userService;
