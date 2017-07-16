@@ -16,7 +16,7 @@
 
     <properties>
         <!-- project settings -->
-        <start-class>at.ac.tuwien.inso.sepm.ticketline.client.TicketlineClientApplication
+        <start-class>at.mvgeboltskirchen.kroissma.mvgapp.client.TicketlineClientApplication
         </start-class>
         <preloader-class>at.ac.tuwien.inso.sepm.ticketline.client.app.preloader.AppPreloader
         </preloader-class>

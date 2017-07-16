@@ -10,7 +10,7 @@
 <VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="768.0" prefWidth="1024.0"
     stylesheets="@/css/main.css"
     xmlns="http://javafx.com/javafx/8"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.MainController"
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.MainController"
     fx:id="vBoxMain">
     <children>
         <ProgressBar style="-fx-border-insets: 0; -fx-border-radius: 0; -fx-border-style: none;"

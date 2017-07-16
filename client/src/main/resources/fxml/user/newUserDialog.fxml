@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.user.NewUserController">
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.user.NewUserController">
     <center>
         <GridPane hgap="10.0" vgap="10.0">
             <padding>

@@ -11,7 +11,7 @@
     minWidth="-Infinity"
     prefHeight="220.0" prefWidth="600.0" stylesheets="@/css/ticketlineInfo.css"
     xmlns="http://javafx.com/javafx/8.0.92"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.TicketlineInfoController">
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.TicketlineInfoController">
     <children>
         <ImageView fitHeight="220.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
             <image>

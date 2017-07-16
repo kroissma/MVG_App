@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" onMouseClicked="#showNewsDetails" spacing="5.0"
     styleClass="newsElementBackground" xmlns="http://javafx.com/javafx/8.0.112"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.news.NewsElementController">
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.news.NewsElementController">
     <stylesheets>
         <URL value="@/css/newsElement.css"/>
     </stylesheets>

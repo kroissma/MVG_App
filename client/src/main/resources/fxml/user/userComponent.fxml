@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.user.UserController">
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.user.UserController">
     <top>
         <VBox BorderPane.alignment="CENTER" spacing="5.0">
             <children>

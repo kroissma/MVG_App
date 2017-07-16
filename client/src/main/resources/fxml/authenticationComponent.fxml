@@ -15,8 +15,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<StackPane xmlns:fx="http://javafx.com/fxml/1" styleClass="glass" xmlns="http://javafx.com/javafx/8.0.111"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.AuthenticationController"
+<StackPane xmlns:fx="http://javafx.com/fxml/1" styleClass="glass"
+    xmlns="http://javafx.com/javafx/8.0.111"
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.AuthenticationController"
     fx:id="loginNode">
     <children>
         <Pane styleClass="background"/>
@@ -27,7 +28,8 @@
                         <Image url="@/image/ticketlineLogo.png"/>
                     </image>
                 </ImageView>
-                <GridPane style="-fx-background-color: white; -fx-background-radius: 3;" alignment="CENTER" maxHeight="-Infinity"
+                <GridPane style="-fx-background-color: white; -fx-background-radius: 3;"
+                    alignment="CENTER" maxHeight="-Infinity"
                     maxWidth="-Infinity" minWidth="250.0"
                     prefWidth="400.0" vgap="5.0">
                     <columnConstraints>
@@ -59,7 +61,8 @@
                 </GridPane>
                 <HBox alignment="CENTER_RIGHT">
                     <children>
-                        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAuthenticate"
+                        <Button defaultButton="true" mnemonicParsing="false"
+                            onAction="#handleAuthenticate"
                             text="Authenticate" fx:id="btnAuthenticate"/>
                     </children>
                 </HBox>

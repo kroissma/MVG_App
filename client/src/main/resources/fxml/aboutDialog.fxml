@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: white;"
     xmlns="http://javafx.com/javafx/8.0.121"
-    fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.AboutController">
+    fx:controller="at.mvgeboltskirchen.kroissma.mvgapp.client.gui.AboutController">
     <children>
         <fx:include source="ticketlineInfo.fxml" fx:id="ticketlineInfo"/>
         <GridPane hgap="5.0" vgap="5.0">
