@@ -1,12 +1,14 @@
 package at.mvgeboltskirchen.kroissma.mvgapp.server.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.validation.constraints.Size;
 
+@Entity
 public class Logo {
 
     @Id
@@ -18,7 +20,8 @@ public class Logo {
     @Size(max = 100)
     private String title;
 
-    @Column(nullable = true, length = 512)
+    @Column(nullable = true)
+    @Size(max = 100)
     private String imagePath;
 
     public static LogoBuilder builder() {

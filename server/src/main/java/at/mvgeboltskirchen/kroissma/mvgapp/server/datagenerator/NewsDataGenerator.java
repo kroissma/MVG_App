@@ -2,7 +2,6 @@ package at.mvgeboltskirchen.kroissma.mvgapp.server.datagenerator;
 
 import at.mvgeboltskirchen.kroissma.mvgapp.server.entity.News;
 import at.mvgeboltskirchen.kroissma.mvgapp.server.repository.NewsRepository;
-import at.mvgeboltskirchen.kroissma.mvgapp.server.repository.UserRepository;
 import com.github.javafaker.Faker;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -18,15 +17,13 @@ import org.springframework.stereotype.Component;
 public class NewsDataGenerator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NewsDataGenerator.class);
-    private static final int NUMBER_OF_NEWS_TO_GENERATE = 25;
+    private static final int NUMBER_OF_NEWS_TO_GENERATE = 2;
 
     private final NewsRepository newsRepository;
-    private final UserRepository userRepository;
     private final Faker faker;
 
-    public NewsDataGenerator(NewsRepository newsRepository, UserRepository userRepository) {
+    public NewsDataGenerator(NewsRepository newsRepository) {
         this.newsRepository = newsRepository;
-        this.userRepository = userRepository;
         faker = new Faker();
     }
 
@@ -47,7 +44,6 @@ public class NewsDataGenerator {
                                 toInstant(),
                             ZoneId.systemDefault()
                         ))
-                    //.creator(userRepository.findByUsername("admin").get())
                     .build();
                 LOGGER.debug("saving news {}", news);
                 newsRepository.save(news);

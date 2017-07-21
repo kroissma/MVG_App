@@ -58,7 +58,7 @@
                 <Label GridPane.columnIndex="0" GridPane.rowIndex="3"
                     text="%news.create.imagePath.label"/>
                 <Label GridPane.columnIndex="1" GridPane.rowIndex="3"
-                    text="%news.create.imagePath.path"
+                    text="%news.create.imagePath.imagePath"
                     fx:id="lblPath"/>
                 <Button GridPane.columnIndex="2" GridPane.rowIndex="3"
                     maxWidth="Infinity" onAction="#showFileChooser" fx:id="homeButton"/>

@@ -9,10 +9,10 @@ public class LogoDTO {
     @ApiModelProperty(readOnly = true, name = "The automatically generated database id")
     private Long id;
 
-    @ApiModelProperty(required = true, name = "The title of the news")
+    @ApiModelProperty(required = true, name = "The title of the logo")
     private String title;
 
-    @ApiModelProperty(name = "The image of the news")
+    @ApiModelProperty(name = "The image of the logo")
     private byte[] imageBytes;
 
     public static LogoDTOBuilder builder() {
@@ -45,7 +45,7 @@ public class LogoDTO {
 
     @Override
     public String toString() {
-        return "DetailedNewsDTO{" +
+        return "LogoDTO{" +
             "id=" + id +
             ", title='" + title + '\'' +
             ", image='" + imageBytes + '\'' +

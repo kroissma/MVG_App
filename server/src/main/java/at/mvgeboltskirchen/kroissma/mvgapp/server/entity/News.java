@@ -32,10 +32,6 @@ public class News {
     @Column(nullable = true, length = 512)
     private String image;
 
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id", nullable = true)
-//    private User creator;
-
     @ManyToMany(mappedBy = "readNews")
     private Set<User> users;
 
@@ -74,14 +70,6 @@ public class News {
     public void setText(String text) {
         this.text = text;
     }
-
-//    public User getCreator() {
-//        return creator;
-//    }
-
-//    public void setCreator(User creator) {
-//        this.creator = creator;
-//    }
 
     public Set<User> getUsers() {
         return users;
@@ -135,9 +123,6 @@ public class News {
         if (image != null ? !image.equals(news.image) : news.image != null) {
             return false;
         }
-//        if (creator != null ? !creator.equals(news.creator) : news.creator != null) {
-//            return false;
-//        }
         return text != null ? text.equals(news.text) : news.text == null;
 
     }
@@ -149,7 +134,6 @@ public class News {
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (text != null ? text.hashCode() : 0);
         result = 31 * result + (image != null ? image.hashCode() : 0);
-//        result = 31 * result + (creator != null ? creator.hashCode() : 0);
         return result;
     }
 
@@ -160,8 +144,6 @@ public class News {
         private String title;
         private String text;
         private String image;
-//        private User creator;
-
 
         private NewsBuilder() {
         }
@@ -191,11 +173,6 @@ public class News {
             return this;
         }
 
-        //       public NewsBuilder creator(User creator) {
-        //           this.creator = creator;
-        //           return this;
-        //       }
-
         public News build() {
             News news = new News();
             news.setId(id);
@@ -203,7 +180,6 @@ public class News {
             news.setTitle(title);
             news.setText(text);
             news.setImage(image);
-//            news.setCreator(creator);
             return news;
         }
     }

@@ -6,7 +6,7 @@ banner:
   location: banner/banner.txt
 
 server:
-  context-path: /
+  context-imagePath: /
 
 spring:
   application:

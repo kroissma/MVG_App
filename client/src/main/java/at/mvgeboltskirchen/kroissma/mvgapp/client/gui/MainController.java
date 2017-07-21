@@ -1,5 +1,6 @@
 package at.mvgeboltskirchen.kroissma.mvgapp.client.gui;
 
+import at.mvgeboltskirchen.kroissma.mvgapp.client.gui.logo.LogoController;
 import at.mvgeboltskirchen.kroissma.mvgapp.client.gui.news.CreateNewsController;
 import at.mvgeboltskirchen.kroissma.mvgapp.client.gui.news.NewsController;
 import at.mvgeboltskirchen.kroissma.mvgapp.client.gui.user.UserController;
@@ -74,6 +75,8 @@ public class MainController {
     private Tab userTab;
     private CreateNewsController createNewsController;
     private Tab createNewsTab;
+    private LogoController logoController;
+    private Tab logoTab;
 
     @Autowired
     private AuthenticationService authenticationService;
@@ -99,8 +102,29 @@ public class MainController {
         authenticationController = (AuthenticationController) wrapper.getController();
         initLocalizationBindings();
         initNewsTabPane();
+        initLogoTabPane();
         initUserTabPane();
         initCreateNewsTabPane();
+    }
+
+    private void initLogoTabPane() {
+        SpringFxmlLoader.LoadWrapper wrapper = springFxmlLoader
+            .loadAndWrap("/fxml/logo/logoComponent.fxml");
+        logoController = (LogoController) wrapper.getController();
+        logoTab = new Tab(null, (Node) wrapper.getLoadedObject());
+        Glyph newsGlyph = fontAwesome.create(FontAwesome.Glyph.PHOTO);
+        newsGlyph.setFontSize(TAB_ICON_FONT_SIZE);
+        newsGlyph.setColor(Color.WHITE);
+        logoTab.setGraphic(newsGlyph);
+        tpContent.getTabs().add(logoTab);
+
+        tpContent.getSelectionModel().selectedItemProperty().addListener(
+            (observable, oldValue, newValue) -> {
+                if (newValue != null && newValue.equals(logoTab)) {
+                    logoController.loadLogos();
+                }
+            }
+        );
     }
 
     private void initLocalizationBindings() {
@@ -146,6 +170,8 @@ public class MainController {
 //            tpContent.getTabs().remove(0, tpContent.getTabs().size());
             tpContent.getTabs().remove(newsTab);
             initNewsTabPane();
+            tpContent.getTabs().remove(logoTab);
+            initLogoTabPane();
             if (isAdmin) {
                 tpContent.getTabs().remove(userTab);
                 initUserTabPane();

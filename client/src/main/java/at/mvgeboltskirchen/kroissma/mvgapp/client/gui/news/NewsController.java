@@ -55,7 +55,7 @@ public class NewsController {
     @FXML
     private void initialize() {
         tabHeaderController.setIcon(FontAwesome.Glyph.NEWSPAPER_ALT);
-        tabHeaderController.setTitle("tabHeader.title");
+        tabHeaderController.setTitle("tabHeader.title.news");
 
         cbNews.getItems().add(BundleManager.getBundle().getString("news.select.not.read"));
         cbNews.getItems().add(BundleManager.getBundle().getString("news.select.read"));

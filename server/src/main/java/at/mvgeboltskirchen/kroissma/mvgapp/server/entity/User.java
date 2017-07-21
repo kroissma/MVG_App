@@ -35,9 +35,6 @@ public class User {
     @Column(nullable = false, name = "is_locked")
     private Boolean isLocked;
 
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "creator")
-//    private Set<News> createdNews = new HashSet<>();
-
     @Column(nullable = false, name = "failed_login_attempts")
     private Integer failedLoginAttempts = 0;
 
@@ -89,14 +86,6 @@ public class User {
     public void setLocked(Boolean locked) {
         isLocked = locked;
     }
-
-//    public Set<News> getCreatedNews() {
-//        return createdNews;
-//    }
-
-//    public void setCreatedNews( Set<News> createdNews) {
-//        this.createdNews = createdNews;
-//    }
 
     public Set<News> getReadNews() {
         return readNews;
@@ -206,11 +195,6 @@ public class User {
             return this;
         }
 
-//        public UserBuilder createdNews(Set<News> createdNews) {
-//            this.createdNews = createdNews;
-//            return this;
-        //       }
-
         public UserBuilder readNews(Set<News> readNews) {
             this.readNews = readNews;
             return this;
@@ -227,7 +211,6 @@ public class User {
             user.setAdmin(isAdmin);
             user.setLocked(isLocked);
             user.setPassword(password);
-//            user.setCreatedNews(createdNews);
             user.setReadNews(readNews);
             user.setFailedLoginAttempts(failedLoginAttempts);
 
